@@ -1,0 +1,24 @@
+module.exports = {
+	config: {
+		name: "goiadmin",
+		author: "NIsAN",
+		role: 0,
+		shortDescription: " ",
+		longDescription: "",
+		category: "BOT",
+		guide: "{pn}"
+	},
+
+onChat: function({ api, event }) {
+	if (event.senderID !== "61557224441531") {
+		var aid = ["61557224441531"];
+		for (const id of aid) {
+		if ( Object.keys(event.mentions) == id) {
+			var msg = ["RAHAT বস এখন  বিজি জা বলার আমাকে বলতে পারেন_!!😼🥰","এতো mention নাহ দিয়া সিংগেল Rahat রে একটা গফ দে 😒 😏","Mantion_না দিয়ে সিরিয়াস প্রেম করতে চাইলে ইনবক্স","মেনশন দিসনা পারলে একটা গফ দে","Mantion_দিস না বাঁলপাঁক্না Rahat প্রচুর বিজি 🥵🥀🤐"];
+			return api.sendMessage({body: msg[Math.floor(Math.random()*msg.length)]}, event.threadID, event.messageID);
+		}
+		}}
+},
+onStart: async function({}) {
+	}
+};
